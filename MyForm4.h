@@ -712,6 +712,9 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	String^ reference = textBox13->Text;
 	String^ constring = "Data Source=(local);Initial Catalog=BDD_P;Integrated Security=True";
 	SqlConnection^ conDataBase = gcnew SqlConnection(constring);
+
+
+	
 	SqlCommand^ cmdDataBase = gcnew SqlCommand("SELECT * FROM Commande WHERE Referance = '" + reference + "' ", conDataBase);
 	conDataBase->Open();
 	SqlDataReader^ myReader = cmdDataBase->ExecuteReader();
@@ -744,7 +747,8 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 
 
 	myReader->Close();
-	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT * FROM Commande WHERE Referance = '" + reference + "' ", conDataBase);
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT [Commande].Referance, Date_Livraison, Date_Emision, Date_Payment, Moyen_Payment, [contient].ReferenceArticle, Montant_HT, Montant_TVA, Montant_TTC, Remise, [Commande].Num_c, Nom_c, Prenom_c FROM client,Commande,contient,Article WHERE [Commande].Num_c = [client].Num_c AND [Commande].Referance = '" + reference + "' AND [Commande].Referance = [contient].Referance AND [contient].ReferenceArticle = [Article].ReferenceArticle", conDataBase);
+
 	DataTable^ data = gcnew DataTable();
 	data->Clear();
 	adapter->Fill(data);
