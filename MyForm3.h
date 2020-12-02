@@ -57,7 +57,7 @@ namespace gestion {
 
 	private: System::Windows::Forms::Label^ label5;
 
-	private: System::Windows::Forms::Label^ label4;
+
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button1;
@@ -76,7 +76,7 @@ namespace gestion {
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
+
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox8;
 	private: System::Windows::Forms::TextBox^ textBox9;
@@ -112,7 +112,6 @@ namespace gestion {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -128,7 +127,6 @@ namespace gestion {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
@@ -231,19 +229,6 @@ namespace gestion {
 			this->label5->TabIndex = 32;
 			this->label5->Text = L"Quantite_Article";
 			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->BackColor = System::Drawing::SystemColors::Info;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 8.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label4->Location = System::Drawing::Point(46, 214);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(78, 12);
-			this->label4->TabIndex = 30;
-			this->label4->Text = L"Montant_TTC";
-			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
@@ -285,7 +270,7 @@ namespace gestion {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 8.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label2->Location = System::Drawing::Point(46, 252);
+			this->label2->Location = System::Drawing::Point(46, 223);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(86, 12);
 			this->label2->TabIndex = 45;
@@ -298,7 +283,7 @@ namespace gestion {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 8.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label9->Location = System::Drawing::Point(46, 290);
+			this->label9->Location = System::Drawing::Point(46, 261);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(92, 12);
 			this->label9->TabIndex = 47;
@@ -311,7 +296,7 @@ namespace gestion {
 			this->label10->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 8.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->label10->Location = System::Drawing::Point(12, 328);
+			this->label10->Location = System::Drawing::Point(12, 299);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(157, 12);
 			this->label10->TabIndex = 49;
@@ -372,30 +357,23 @@ namespace gestion {
 			this->textBox5->Size = System::Drawing::Size(131, 20);
 			this->textBox5->TabIndex = 57;
 			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(30, 229);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(131, 20);
-			this->textBox6->TabIndex = 58;
-			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(30, 267);
+			this->textBox7->Location = System::Drawing::Point(30, 238);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(131, 20);
 			this->textBox7->TabIndex = 59;
 			// 
 			// textBox8
 			// 
-			this->textBox8->Location = System::Drawing::Point(30, 305);
+			this->textBox8->Location = System::Drawing::Point(30, 276);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(131, 20);
 			this->textBox8->TabIndex = 60;
 			// 
 			// textBox9
 			// 
-			this->textBox9->Location = System::Drawing::Point(30, 343);
+			this->textBox9->Location = System::Drawing::Point(30, 314);
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(131, 20);
 			this->textBox9->TabIndex = 61;
@@ -424,13 +402,12 @@ namespace gestion {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(617, 365);
+			this->ClientSize = System::Drawing::Size(617, 345);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->textBox7);
-			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox3);
@@ -449,7 +426,6 @@ namespace gestion {
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
-			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
@@ -471,7 +447,7 @@ namespace gestion {
 		String^ constring = "Data Source=(local);Initial Catalog=BDD_P;Integrated Security=True";
 		SqlConnection^ conDataBase = gcnew SqlConnection(constring);
 
-		if (textBox1->Text == "" && textBox2->Text == "" && textBox3->Text == "" && textBox4->Text == "" && textBox5->Text == "" && textBox6->Text == "") {
+		if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == "" || textBox5->Text == "") {
 			MessageBox::Show("vous devez remplir tous les champs");
 		}
 		else {
@@ -479,13 +455,12 @@ namespace gestion {
 			String^ designation = textBox2->Text;
 			int quantite = Int32::Parse(textBox3->Text);
 			double montant_ht = double::Parse(textBox4->Text);
-			double montant_tva = double::Parse(textBox5->Text);
-			double montant_ttc = double::Parse(textBox6->Text);
+			double montant_tva = double::Parse(textBox5->Text);			
 			String^ nature = textBox7->Text;
 			String^ couleur = textBox8->Text;
 			int seuil = Int32::Parse(textBox9->Text);
 
-
+			double montant_ttc = (montant_tva / 100) * montant_ht + montant_ht;
 			SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO Article (ReferenceArticle,Nom_Article,Quantite_Article,Montant_HT,Montant_TVA,Montant_TTC, Nature_Article, Couleur_Article,Seuil_reapprovisionnement) VALUES('" + reference + "', '" + designation + "', " + quantite + ", " + montant_ht + ", " + montant_tva + ", " + montant_ttc + ", '" + nature + "', '" + couleur + "', '" + seuil + "'); ", conDataBase);
 			SqlDataReader^ myReader;
 			try {
@@ -529,7 +504,6 @@ namespace gestion {
 			textBox3->Text = Convert::ToString(myReader->GetInt32(2));
 			textBox4->Text = Convert::ToString(myReader->GetDouble(3));
 			textBox5->Text = Convert::ToString(myReader->GetDouble(4));
-			textBox6->Text = Convert::ToString(myReader->GetDouble(5));
 			textBox7->Text = myReader->GetString(6);
 			textBox8->Text = myReader->GetString(7);
 			textBox9->Text = Convert::ToString(myReader->GetInt32(8));
@@ -553,10 +527,10 @@ namespace gestion {
 		int quantite = Int32::Parse(textBox3->Text);
 		double montant_ht = double::Parse(textBox4->Text);
 		double montant_tva = double::Parse(textBox5->Text);
-		double montant_ttc = double::Parse(textBox6->Text);
 		String^ nature = textBox7->Text;
 		String^ couleur = textBox8->Text;
 		int seuil = Int32::Parse(textBox9->Text);
+		double montant_ttc = (montant_tva / 100) * montant_ht + montant_ht;
 
 		SqlCommand^ cmdDataBase = gcnew SqlCommand("UPDATE Article SET Nom_Article = '" + designation + "',  Quantite_Article = " + quantite + ", Montant_HT = " + montant_ht + ", Montant_TVA = " + montant_tva + ", Montant_TTC = " + montant_ttc + ", Seuil_reapprovisionnement = " + seuil + ", Nature_Article = '" + nature + "', Couleur_Article = '" + couleur + "' WHERE ReferenceArticle = '" + reference + "' ", conDataBase);
 		SqlDataReader^ myReader;
@@ -600,7 +574,6 @@ namespace gestion {
 		textBox3->Text = "";
 		textBox4->Text = "";
 		textBox5->Text = "";
-		textBox6->Text = "";
 		textBox7->Text = "";
 		textBox8->Text = "";
 		textBox9->Text = "";

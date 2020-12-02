@@ -288,6 +288,7 @@ namespace gestion {
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(100, 20);
 			this->textBox7->TabIndex = 16;
+			this->textBox7->Text = L"u";
 			// 
 			// label7
 			// 
