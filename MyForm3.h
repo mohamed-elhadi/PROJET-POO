@@ -82,6 +82,7 @@ namespace gestion {
 	private: System::Windows::Forms::TextBox^ textBox9;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Button^ button7;
+
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
