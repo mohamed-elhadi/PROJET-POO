@@ -83,6 +83,7 @@ namespace gestion {
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::BindingSource^ bindingSource2;
 	private: System::Windows::Forms::TextBox^ textBox14;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -135,10 +136,12 @@ namespace gestion {
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->BeginInit();
+			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -297,7 +300,7 @@ namespace gestion {
 			// 
 			// textBox8
 			// 
-			this->textBox8->Location = System::Drawing::Point(36, 229);
+			this->textBox8->Location = System::Drawing::Point(11, 19);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(100, 20);
 			this->textBox8->TabIndex = 18;
@@ -320,21 +323,21 @@ namespace gestion {
 			// 
 			// textBox10
 			// 
-			this->textBox10->Location = System::Drawing::Point(36, 229);
+			this->textBox10->Location = System::Drawing::Point(11, 19);
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(100, 20);
 			this->textBox10->TabIndex = 21;
 			// 
 			// textBox11
 			// 
-			this->textBox11->Location = System::Drawing::Point(36, 229);
+			this->textBox11->Location = System::Drawing::Point(11, 19);
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(100, 20);
 			this->textBox11->TabIndex = 22;
 			// 
 			// textBox12
 			// 
-			this->textBox12->Location = System::Drawing::Point(38, 229);
+			this->textBox12->Location = System::Drawing::Point(9, 19);
 			this->textBox12->Name = L"textBox12";
 			this->textBox12->Size = System::Drawing::Size(100, 20);
 			this->textBox12->TabIndex = 23;
@@ -411,7 +414,7 @@ namespace gestion {
 			// 
 			this->dataGridView2->AccessibleName = L"datagridview1";
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(220, 75);
+			this->dataGridView2->Location = System::Drawing::Point(216, 73);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->Size = System::Drawing::Size(502, 224);
 			this->dataGridView2->TabIndex = 71;
@@ -421,24 +424,40 @@ namespace gestion {
 			// 
 			this->dataGridView4->AccessibleName = L"datagridview2";
 			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView4->Location = System::Drawing::Point(220, 75);
+			this->dataGridView4->Location = System::Drawing::Point(216, 73);
 			this->dataGridView4->Name = L"dataGridView4";
 			this->dataGridView4->Size = System::Drawing::Size(502, 224);
 			this->dataGridView4->TabIndex = 72;
 			// 
 			// textBox14
 			// 
-			this->textBox14->Location = System::Drawing::Point(36, 229);
+			this->textBox14->Location = System::Drawing::Point(0, 19);
 			this->textBox14->Name = L"textBox14";
 			this->textBox14->Size = System::Drawing::Size(102, 20);
 			this->textBox14->TabIndex = 73;
+			this->textBox14->TextChanged += gcnew System::EventHandler(this, &MyForm4::textBox14_TextChanged);
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->textBox14);
+			this->groupBox1->Controls->Add(this->textBox8);
+			this->groupBox1->Controls->Add(this->textBox10);
+			this->groupBox1->Controls->Add(this->textBox11);
+			this->groupBox1->Controls->Add(this->textBox12);
+			this->groupBox1->Location = System::Drawing::Point(98, 3);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(35, 26);
+			this->groupBox1->TabIndex = 74;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"groupBox1";
+			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm4::groupBox1_Enter);
 			// 
 			// MyForm4
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(730, 369);
-			this->Controls->Add(this->textBox14);
+			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->dataGridView4);
 			this->Controls->Add(this->dataGridView2);
 			this->Controls->Add(this->label9);
@@ -448,12 +467,8 @@ namespace gestion {
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
-			this->Controls->Add(this->textBox12);
-			this->Controls->Add(this->textBox11);
-			this->Controls->Add(this->textBox10);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->label6);
@@ -479,6 +494,8 @@ namespace gestion {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->EndInit();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -619,14 +636,14 @@ namespace gestion {
 		}
 
 		myReader3->Close();
-
+		int q= Int32::Parse(var);
 		int iInt = Int32::Parse(var);
 		int fint = Int32::Parse(textBox8->Text);
 		iInt = iInt + fint;
 
 		condatabase->Close();
 
-		SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO  contient (Referance,ReferenceArticle ) values('" + ref + "',(SELECT ReferenceArticle FROM Article where Nom_Article = '" + nomArticle + "' ));", condatabase);
+		SqlCommand^ cmdDataBase = gcnew SqlCommand("INSERT INTO  contient (Referance,ReferenceArticle,QuantiteArticle ) values('" + ref + "',(SELECT ReferenceArticle FROM Article where Nom_Article = '" + nomArticle + "' ),'"+q+"');", condatabase);
 		SqlDataReader^ myReader;
 		try {
 			condatabase->Open();
@@ -747,7 +764,7 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 
 
 	myReader->Close();
-	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT [Commande].Referance, Date_Livraison, Date_Emision, Date_Payment, Moyen_Payment, [contient].ReferenceArticle, Montant_HT, Montant_TVA, Montant_TTC, Remise, [Commande].Num_c, Nom_c, Prenom_c FROM client,Commande,contient,Article WHERE [Commande].Num_c = [client].Num_c AND [Commande].Referance = '" + reference + "' AND [Commande].Referance = [contient].Referance AND [contient].ReferenceArticle = [Article].ReferenceArticle", conDataBase);
+	SqlDataAdapter^ adapter = gcnew SqlDataAdapter("SELECT [Commande].Referance,QuantiteArticle, Date_Livraison, Date_Emision, Date_Payment, Moyen_Payment, [contient].ReferenceArticle, Montant_HT, Montant_TVA, Montant_TTC, Remise, [Commande].Num_c, Nom_c, Prenom_c FROM client,Commande,contient,Article WHERE [Commande].Num_c = [client].Num_c AND [Commande].Referance = '" + reference + "' AND [Commande].Referance = [contient].Referance AND [contient].ReferenceArticle = [Article].ReferenceArticle", conDataBase);
 
 	DataTable^ data = gcnew DataTable();
 	data->Clear();
@@ -755,6 +772,11 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	bindingSource1->DataSource = data;
 	dataGridView2->DataSource = bindingSource1;
 
+}
+private: System::Void textBox14_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
 }
 };
 }
